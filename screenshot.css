@@ -1,0 +1,7 @@
+.container-page-animation, iframe .page-animation {
+    visibility: hidden;
+}
+
+#hc-cookie-dialog {
+    display: none !important;
+}
