@@ -3,12 +3,10 @@ import { join } from 'node:path';
 
 import { pages } from '../pages';
 
-const baseURL = 'https://hc-dev.highcharts.com';
-
 for (const pageURL of pages) {
     
     test(pageURL, async ({page}) => {
-        await page.goto(baseURL + pageURL);
+        await page.goto(pageURL);
 
         await page.waitForLoadState('networkidle');
 
