@@ -4,7 +4,6 @@ import { join } from 'node:path';
 import { pages } from '../pages';
 
 for (const pageURL of pages) {
-    
     test(pageURL, async ({page}) => {
         await page.goto(pageURL);
 
@@ -16,3 +15,9 @@ for (const pageURL of pages) {
         });
     });
 }
+
+test('Cookie banner', async ({ page }) => {
+    await page.goto('/');
+    expect (await page.textContent('#hc-cookie-dialog'))
+        .toMatchSnapshot('cookie-dialog.txt');
+});
