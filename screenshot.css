@@ -1,4 +1,4 @@
-.container-page-animation, iframe .page-animation {
+.container-page-animation, iframe .page-animation, iframe[src*=www\.highcharts\.com\/samples] {
     visibility: hidden;
 }
 

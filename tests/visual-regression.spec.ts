@@ -1,14 +1,14 @@
 import { test, expect } from '@playwright/test';
-import { pages } from '../pages';
-
 import { join } from 'node:path';
 
-const root = 'https://hc-dev.highcharts.com';
+import { pages } from '../pages';
+
+const baseURL = 'https://hc-dev.highcharts.com';
 
 for (const pageURL of pages) {
     
-    test(pageURL, async ({page}) =>{
-        await page.goto(root + pageURL);
+    test(pageURL, async ({page}) => {
+        await page.goto(baseURL + pageURL);
 
         await page.waitForLoadState('networkidle');
 
