@@ -18,4 +18,4 @@ If only some changes are intended, you should either:
 ## Ymse
 * If you need to work around an element being random in some way, the easiest fix is to set `visibility: hidden` in [screenshot.css](./screenshot.css)
 * More pages can be added in [pages.ts](./pages.ts)
-* If you wish to run the tests towards a different baseURL, this can be changed in the [.env](./env) file
+* If you wish to run the tests towards a different baseURL, this can be changed in the [.env](./.env) file
